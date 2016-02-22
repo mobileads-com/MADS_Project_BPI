@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#rma-widget {
+    width: 480px;
+    height: 320px;
+}
