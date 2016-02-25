@@ -1,11 +1,75 @@
+@import './font.css';
+@import './sprites.css';
+
 * {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+*:not(.modal):not(.modal-body):not(.modal-dialog):not(.modal-footer):not(.modal-header):not([class*="icon-"]):not(.gray) {
     margin: 0;
     padding: 0;
+    font-family: harabara, sans-serif;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+a, a:hover, a:visited, a:focus {
+    text-decoration: none;
+    color: black;
+}
+
+
+.bottom {
+    top: initial;
+    bottom: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn .5s ease-in 1 forwards;
+    -webkit-animation: fadeIn .5s ease-in 1 forwards;
+    -o-animation: fadeIn .5s ease-in 1 forwards;
+}
+
+.is-paused {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+#trace {
+    width: 480px;
+    height: 320px;
+    background: url(../img/trace.png);
+    background-size: cover;
+    z-index: 100;
+    opacity: 0.3;
+}
+
+#ad {
+    -webkit-transform: translate(-80px, 80px) rotate(90deg);
+    -moz-transform: translate(-80px, 80px) rotate(90deg);
+    -ms-transform: translate(-80px, 80px) rotate(90deg);
+    -o-transform: translate(-80px, 80px) rotate(90deg);
+    transform: translate(-80px, 80px) rotate(90deg);
+}
+
+#ad, #second, #first {
+    width: 480px;
+    height: 320px;
 }
 
 #rma-widget {
-    width: 480px;
-    height: 320px;
+    width: 320px;
+    height: 480px;
     background: -webkit-linear-gradient(335deg, rgb(2, 163, 223) 0%, rgb(50, 182, 230) 1%, rgb(8, 165, 224) 82%);
     background: -o-linear-gradient(335deg, rgb(2, 163, 223) 0%, rgb(50, 182, 230) 1%, rgb(8, 165, 224) 82%);
     background: -ms-linear-gradient(335deg, rgb(2, 163, 223) 0%, rgb(50, 182, 230) 1%, rgb(8, 165, 224) 82%);
@@ -13,10 +77,650 @@
     background: linear-gradient(115deg, rgb(2, 163, 223) 0%, rgb(50, 182, 230) 1%, rgb(8, 165, 224) 82%);
 }
 
-#tap {
-    width: 100%;
+#top-text, #hotspots, #learn, #goto, #manila {
+    -webkit-transition: opacity .6s ease-out;
+    -moz-transition: opacity .6s ease-out;
+    -ms-transition: opacity .6s ease-out;
+    -o-transition: opacity .6s ease-out;
+    transition: opacity .6s ease-out;
+}
+
+#top-text {
     text-align: center;
-    top: 10px;
+    top: 15px;
+    left: 55px;
     color: white;
-    fill: currentColor;
+    width: 353px;
+    font-size: 36px;
+}
+
+#manila, #hotspots {
+    top: 85px;
+    left: 5px;
+}
+
+#hotspots {
+    z-index: 1;
+}
+
+#learn {
+    top: initial;
+    left: initial;
+    bottom: 17px;
+    right: 13px;
+    padding: 3px 10px;
+    font-size: 19px;
+    border-radius: 4px;
+    background: #ff2500;
+    color: #fff;
+    border: 0;
+}
+
+#goto {
+    top: initial;
+    left: 15px;
+    font-size: 17px;
+    bottom: 24px;
+    color: #fff;
+}
+
+/* Modal */
+.btn-close {
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    left: initial !important;
+    top: -21px !important;
+    font-size: 17px;
+    color: white;
+    background: none;
+    border: none;
+}
+
+.modal:before {
+    content: "";
+    /*background: rgba(0,0,0,0) -moz-radial-gradient(circle at 68px 109px, rgba(0,0,0,0.2) 3%,rgba(0,0,0,0.5) 8%,rgba(0,0,0,1) 11%);*/
+    /*background: rgba(0,0,0,0) -webkit-radial-gradient(circle at 68px 109px, rgba(0,0,0,0.2) 3%,rgba(0,0,0,0.5) 8%,rgba(0,0,0,1) 11%);*/
+    /*background: rgba(0,0,0,0) radial-gradient(circle at 68px 109px, rgba(0,0,0,0.2) 3%,rgba(0,0,0,0.5) 8%,rgba(0,0,0,1) 11%);*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 2;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -ms-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+
+.modal.show-modal:before {
+    opacity: 0.6;
+    width: 480px;
+    height: 320px;
+}
+
+.modal.hiding:before {
+    width: 480px;
+    height: 320px;
+    opacity: 0;
+}
+
+.modal.hiding .modal-dialog {
+    opacity: 1;
+    top: 0;
+}
+
+.modal.show-modal .modal-dialog {
+    opacity: 1;
+    top: 0;
+}
+
+.modal-dialog {
+    background: #fefefe;
+    position: fixed;
+    left: 0;
+    top: -100%;
+    z-index: 3;
+    width: 194px;
+    height: 280px;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-header,
+.modal-footer {
+    padding: 10px 20px;
+}
+
+.modal-header h2 {
+    font-size: 24px;
+    color: #c82505;
+    font-family: 'harabaran', sans-serif !important;
+}
+
+.modal-footer {
+    border-top: #eee solid 1px;
+    text-align: right;
+}
+
+.modal-body .desc {
+    font-size: 15px;
+    line-height: 16px;
+    font-family: 'harabaran', sans-serif !important;
+}
+
+.modal-body .map {
+    bottom: 34px !important;
+    top: initial !important;
+    left: 21px !important;
+}
+
+.modal-body [class*="icon-"] {
+    font-size: 12px;
+}
+
+.modal-body .download {
+    bottom: 5px !important;
+    top: initial !important;
+    font-size: 13.5px;
+    left: 19px !important;
+}
+
+.modal-body .expand {
+    bottom: 5px !important;
+    top: initial !important;
+    font-size: 13.5px;
+    left: 103px !important;
+}
+
+
+
+#mapexpanded {
+    left: 0;
+    top: 0;
+    width: 480px;
+    height: 320px;
+    z-index: 10;
+    opacity: 1;
+    background: #fff;
+    -webkit-transition: opacity 0.6s ease-out;
+    -moz-transition: opacity 0.6s ease-out;
+    -o-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+#mapexpanded button {
+    z-index: 6;
+}
+
+.gray {
+    color: #ccc;
+}
+
+#mapexpanded button {
+    right: 41px;
+    top: 14px;
+    left: initial;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 3px 15px;
+    color: #fff;
+    border: none;
+}
+
+#mapexpanded.hide {
+    left: -50px;
+    top: -100%;
+    opacity: 0;
+    background: #fff;
+}
+
+.expand, .marker {
+    cursor: pointer;
+}
+
+#learnBox {
+    width: 480px;
+    bottom: 0;
+    height: 73px;
+    top: initial;
+    z-index: 50;
+}
+
+.no-display {
+    display: none;
+}
+
+#highspot {
+    background: url(../img/highspot.png);
+    width: 26px;
+    height: 36px;
+    z-index: 4;
+}
+
+#highspot.none {
+    top: -100%;
+    left: -50px;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    -moz-transition: opacity 0.6s ease-out;
+    -o-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+#highspot:not(.none) {
+    opacity: 1;
+    -webkit-transition: opacity 0.6s ease-out;
+    -moz-transition: opacity 0.6s ease-out;
+    -o-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+#highspot.hidalgo {
+    left: 56px;
+    top: 96px;
+}
+
+#highspot.church {
+    left: 100px;
+    top: 98px;
+}
+
+#highspot.church {
+    left: 100px;
+    top: 98px;
+}
+
+#highspot.fish {
+    left: 128px;
+    top: 185px;
+}
+
+#highspot.ball {
+    left: 209px;
+    top: 197px;
+}
+
+#highspot.food {
+    left: 222px;
+    top: 118px;
+}
+
+#highspot.karaoke {
+    left: 255px;
+    top: 170px;
+}
+
+#highspot.sun {
+    left: 271px;
+    top: 90px;
+}
+
+#highspot.jeep {
+    left: 358px;
+    top: 186px;
+}
+
+#highspot.shop {
+    left: 427px;
+    top: 162px;
+}
+
+/* Hidalgo */
+.hidalgo:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 68px 109px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 68px 109px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 68px 109px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#hidalgo {
+    left: 136px;
+    top: 28px;
+}
+
+#hidalgo h2 {
+    top: 28px;
+    left: 20px;
+}
+
+#hidalgo .desc {
+    padding: 20px;
+    top: 37px;
+}
+
+/* Church */
+.church:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 111px 114px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 111px 114px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 111px 114px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+#church {
+    left: 160px;
+    top: 28px;
+    width:217px;
+}
+
+#church h2 {
+    top: 35px;
+    left: 20px;
+}
+
+#church .desc {
+    padding: 6px;
+    top: 59px;
+    left: 13px;
+}
+
+#church .expand {
+    left: 127px !important;
+}
+
+/* Fish */
+.fish:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 141px 196px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 141px 196px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 141px 196px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#fish {
+    left: 193px;
+    top: 28px;
+    width: 245px;
+}
+
+#fish h2 {
+    top: 13px;
+    left: 20px;
+}
+
+#fish .desc {
+    padding: 11px 7px;
+    top: 61px;
+    left: 12px;
+}
+
+#fish .expand {
+    left: 165px !important;
+}
+
+/* Ball */
+.ball:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 221px 218px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 221px 218px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 221px 218px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#ball {
+    left: 246px;
+    top: 38px;
+    width: 229px;
+}
+
+#ball h2 {
+    top: 6px;
+    left: 15px;
+    line-height: 24px;
+}
+
+#ball .desc {
+    padding: 16px 14px;
+    top: 40px;
+    left: 1px;
+}
+
+#ball .expand {
+    left: 153px !important;
+}
+
+#ball .map {
+    left: 14px !important;
+    bottom: 25px !important;
+}
+
+#ball .download {
+    left: 13px !important;
+}
+
+#ball .btn-close {
+    left: 2px !important;
+    right: initial;
+}
+
+/* Food */
+.food:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 231px 142px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 231px 142px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 231px 142px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#food {
+    left: 258px;
+    top: 38px;
+    width: 221px;
+}
+
+#food h2 {
+    top: 4px;
+    left: 7px;
+}
+
+#food .desc {
+    padding: 5px;
+    top: 36px;
+}
+
+#food .expand {
+    left: 149px !important;
+}
+
+#food .map {
+    left: 5px !important;
+    bottom: 25px !important;
+}
+
+#food .download {
+    left: 5px !important;
+}
+
+#food .btn-close {
+    left: 2px !important;
+    right: initial;
+}
+
+/* Karaoke */
+.karaoke:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 266px 187px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 266px 187px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 266px 187px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#karaoke {
+    left: 14px;
+    top: 28px;
+    width: 226px;
+}
+
+#karaoke h2 {
+    top: 11px;
+    left: 10px;
+}
+
+#karaoke .desc {
+    padding: 11px;
+    top: 30px;
+}
+
+#karaoke .expand {
+    left: 144px !important;
+}
+
+#karaoke .map, #karaoke .download {
+    left: 9px !important;
+}
+
+/* Sun */
+.sun:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 280px 110px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 280px 110px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 280px 110px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#sun {
+    left: 11px;
+    top: 31px;
+    width: 242px;
+}
+
+#sun h2 {
+    top: 5px;
+    left: 14px;
+}
+
+#sun .desc {
+    padding: 14px;
+    top: 48px;
+}
+
+#sun .map {
+    left:12px !important;
+}
+
+#sun .download {
+    left: 12px !important;
+}
+
+#sun .expand {
+    left: 162px !important;
+}
+
+/* Jeep */
+.jeep:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 364px 203px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 364px 203px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 364px 203px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#jeep {
+    left: 60px;
+    top: 28px;
+    width: 237px;
+}
+
+#jeep h2 {
+    top: 38px;
+    left: 14px;
+}
+
+#jeep .desc {
+    padding: 4px;
+    top: 65px;
+    left: 11px !important;
+}
+
+#jeep .expand {
+    left: 157px !important
+}
+
+#jeep .map {
+    left: 12px !important;
+}
+
+#jeep .download {
+    left: 11px !important;
+}
+
+/* Shop */
+.shop:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 429px 192px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 429px 192px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 429px 192px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#shop {
+    left: 136px;
+    top: 28px;
+    width: 235px;
+}
+
+#shop h2 {
+    top: 11px;
+    left: 86px;
+}
+
+#shop .desc {
+    padding: 13px;
+    top: 56px;
+}
+
+#shop .expand {
+    left: 155px !important;
+}
+
+#shop .map {
+    left: 13px !important;
+}
+
+#shop .download {
+    left: 14px !important;
+}
+
+/* Markers */
+.marker {
+    width: 50px;
+    height: 50px;
+    z-index: 50;
+}
+
+#hidalgoMarker {
+    left: 40px;
+    top: 83px;
+}
+
+#karaokeMarker {
+    left: 243px;
+    top: 163px;
+}
+
+#ballMarker {
+    top: 189px;
+    left: 195px;
+}
+
+#churchMarker {
+    top: 86px;
+    left: 90px;
+}
+
+#fishMarker {
+    top: 176px;
+    left: 115px;
+}
+
+#jeepMarker {
+    top: 175px;
+    left: 342px;
+}
+
+#sunMarker {
+    top: 76px;
+    left: 258px;
+}
+
+#shopMarker {
+    top: 152px;
+    left: 413px;
+}
+
+#foodMarker {
+    top: 109px;
+    left: 210px;
 }
