@@ -181,11 +181,11 @@ var bpi = function () {
         var e = document.getElementById(els[i]);
         e.style.opacity = 1;
       }
-    }, 500);
+    }, 3500);
 
     setTimeout(function () {
       goto.style.opacity = learn.style.opacity = 1;
-    }, 1200);
+    }, 5200);
 
     for (var i in els) {
       var eTransit = document.getElementById(els[i]);
@@ -204,7 +204,7 @@ var bpi = function () {
 
     setTimeout(function () {
       topText.style.opacity = 0;
-    }, 200);
+    }, 3000);
 
     topText.addEventListener('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', cb, false);
   };
