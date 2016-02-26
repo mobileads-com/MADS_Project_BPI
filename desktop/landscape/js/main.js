@@ -371,7 +371,7 @@ var bpi = function () {
 
   var second = {
     controller: function () {
-      return {download: app.path + 'img/Manila_Guide_Mobile.jpg'}
+      return {download: app.path + 'img/Manila_Guide_Desktop.jpg'}
     },
     view: function (ctrl) {
       return m('div#second', [

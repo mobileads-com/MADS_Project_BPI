@@ -280,20 +280,46 @@ var bpi = function () {
   };
 
   var selected = false,
-      markerOpen = false;
+      markerOpen = false,
+      onceManila = true;
 
   var persistent = function (el, isInit, context) {
+    if (el.id === 'manila' && !isInit) {
+      el.style.opacity = 0;
+
+      var si = setInterval(function () {
+        if (!onceManila) {
+          onceManila = !onceManila;
+          el.style.opacity = 1;
+          setTimeout(function () {
+            m.mount(document.getElementById('ad'), fadeInOut(second));
+            clearInterval(si);
+          }, 1000);
+        }
+      }, 100);
+    }
     context.retain = true;
+  };
+
+  window.onload = function () {
+    var f = document.getElementById('first');
+    f.style.opacity = 0;
+    setTimeout(function () {
+      f.style.opacity = 1;
+
+    }, 1000);
+
+    setTimeout(function () {
+      onceManila = false;
+    }, 2000)
   };
 
   var first = {
     controller: function () {
-      setTimeout(function () {
-        m.mount(document.getElementById('ad'), fadeInOut(second));
-      }, 3000);
+
     },
     view: function () {
-      return m('div#first.fade-in', [
+      return m('div#first', [
         m('div#top-text', 'Welcome To'),
         m('div#manila', {config: persistent}, m('img', {src: app.path + 'img/manila.png'}))
       ])
@@ -348,7 +374,7 @@ var bpi = function () {
       highspot.className = 'none';
       modal.className = 'modal'
     }, 300);
-    setTimeout(function() {
+    setTimeout(function () {
       imgMap.src = app.path + 'img/loading.gif';
     }, 900);
     m.endComputation();
@@ -416,7 +442,9 @@ var bpi = function () {
 
   app.contentTag.innerHTML = '<div id="ad"></div>';
 
+
   m.render(document.getElementById('ad'), fadeInOut(first));
+
 
   app.loadCss('css/style.css');
 
