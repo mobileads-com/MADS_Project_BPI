@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aee03a5-d3bb-4dee-88f5-48b89451c795" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/desktop/landscape/img/Manila_Guide_Desktop.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mobile/landscape/img/Manila_Guide_Mobile.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/landscape/css/style.css" afterPath="$PROJECT_DIR$/desktop/landscape/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/landscape/js/main.js" afterPath="$PROJECT_DIR$/desktop/landscape/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile/landscape/css/style.css" afterPath="$PROJECT_DIR$/mobile/landscape/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile/landscape/js/main.js" afterPath="$PROJECT_DIR$/mobile/landscape/js/main.js" />
     </list>
     <ignored path="MADS_Project_BPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,8 +63,8 @@
           <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/desktop/landscape/js/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.062228654">
-                  <caret line="418" column="59" selection-start-line="418" selection-start-column="59" selection-end-line="418" selection-end-column="59" />
+                <state vertical-scroll-proportion="0.58321273">
+                  <caret line="438" column="70" selection-start-line="438" selection-start-column="70" selection-end-line="438" selection-end-column="70" />
                   <folding>
                     <marker date="1456721592553" expanded="true" signature="26764:26772" placeholder="..." />
                     <marker date="1456721592553" expanded="true" signature="27557:27565" placeholder="..." />
@@ -453,7 +447,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456480769694</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="loading animation (Jeff)">
+      <created>1456731715929</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1456731715929</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -462,13 +462,13 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30520305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -495,7 +495,8 @@
     <MESSAGE value="added desktop version (Jeff)" />
     <MESSAGE value="update desktop version (Jeff)" />
     <MESSAGE value="onload (Jeff)" />
-    <option name="LAST_COMMIT_MESSAGE" value="onload (Jeff)" />
+    <MESSAGE value="loading animation (Jeff)" />
+    <option name="LAST_COMMIT_MESSAGE" value="loading animation (Jeff)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -763,8 +764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/desktop/landscape/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.062228654">
-          <caret line="418" column="59" selection-start-line="418" selection-start-column="59" selection-end-line="418" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.58321273">
+          <caret line="438" column="70" selection-start-line="438" selection-start-column="70" selection-end-line="438" selection-end-column="70" />
           <folding>
             <marker date="1456721592553" expanded="true" signature="26764:26772" placeholder="..." />
             <marker date="1456721592553" expanded="true" signature="27557:27565" placeholder="..." />
