@@ -46,12 +46,12 @@ a, a:hover, a:visited, a:focus {
 }
 
 #trace {
-    width: 640px;
-    height: 400px;
-    background: url(../img/trace.png);
-    background-size: cover;
-    z-index: 100;
-    opacity: 0.3;
+    /*width: 640px;*/
+    /*height: 400px;*/
+    /*background: url(../img/trace.png);*/
+    /*background-size: cover;*/
+    /*z-index: 100;*/
+    /*opacity: 0.3;*/
 }
 
 /*#ad {*/
@@ -77,7 +77,16 @@ a, a:hover, a:visited, a:focus {
     background: linear-gradient(115deg, rgb(2, 163, 223) 0%, rgb(50, 182, 230) 1%, rgb(8, 165, 224) 82%);
 }
 
-#top-text, #hotspots, #learn, #goto, #manila {
+#manila, #first {
+    opacity: 0;
+    -webkit-transition: opacity .9s ease-in;
+    -moz-transition: opacity .9s ease-in;
+    -ms-transition: opacity .9s ease-in;
+    -o-transition: opacity .9s ease-in;
+    transition: opacity .9s ease-in;
+}
+
+#top-text, #hotspots, #learn, #goto {
     -webkit-transition: opacity .6s ease-out;
     -moz-transition: opacity .6s ease-out;
     -ms-transition: opacity .6s ease-out;
@@ -138,9 +147,6 @@ a, a:hover, a:visited, a:focus {
 
 .modal:before {
     content: "";
-    /*background: rgba(0,0,0,0) -moz-radial-gradient(circle at 68px 109px, rgba(0,0,0,0.2) 3%,rgba(0,0,0,0.5) 8%,rgba(0,0,0,1) 11%);*/
-    /*background: rgba(0,0,0,0) -webkit-radial-gradient(circle at 68px 109px, rgba(0,0,0,0.2) 3%,rgba(0,0,0,0.5) 8%,rgba(0,0,0,1) 11%);*/
-    /*background: rgba(0,0,0,0) radial-gradient(circle at 68px 109px, rgba(0,0,0,0.2) 3%,rgba(0,0,0,0.5) 8%,rgba(0,0,0,1) 11%);*/
     position: absolute;
     top: 0;
     left: 0;

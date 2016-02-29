@@ -148,9 +148,6 @@ a, a:hover, a:visited, a:focus {
 
 .modal:before {
     content: "";
-    /*background: rgba(0,0,0,0) -moz-radial-gradient(circle at 68px 109px, rgba(0,0,0,0.2) 3%,rgba(0,0,0,0.5) 8%,rgba(0,0,0,1) 11%);*/
-    /*background: rgba(0,0,0,0) -webkit-radial-gradient(circle at 68px 109px, rgba(0,0,0,0.2) 3%,rgba(0,0,0,0.5) 8%,rgba(0,0,0,1) 11%);*/
-    /*background: rgba(0,0,0,0) radial-gradient(circle at 68px 109px, rgba(0,0,0,0.2) 3%,rgba(0,0,0,0.5) 8%,rgba(0,0,0,1) 11%);*/
     position: absolute;
     top: 0;
     left: 0;

@@ -395,9 +395,14 @@ var bpi = function () {
     app.linkOpener('http://makethebesthappen.ph');
   };
 
+  var downloadFile = function (el) {
+    app.linkOpener(el.target.href);
+    el.preventDefault();
+  };
+
   var second = {
     controller: function () {
-      return {download: app.path + 'img/Manila_Guide_Mobile.jpg'}
+      return {download: '//rmarepo.richmediaads.com/3212/bpi/attachments/Manila_Guide_Mobile.jpg'}
     },
     view: function (ctrl) {
       return m('div#second', [
@@ -428,9 +433,10 @@ var bpi = function () {
                 m('img#smallmap.map', {src: selected.map || app.path + 'img/loading.gif'}),
 
                 m('a.download', {
+                  onclick: downloadFile,
                   href: ctrl.download,
-                  download: 'BPI Manila Guide',
-                  target: '_blank'
+                  download: 'BPI Manila Guide Mobile'
+                  //target: '_blank'
                 }, m.trust('Download <span class="icon-download3"></span>')),
                 m('div.expand', {onclick: mapExpand}, m.trust('Expand <span class="icon-enlarge"></span>'))
               ])
