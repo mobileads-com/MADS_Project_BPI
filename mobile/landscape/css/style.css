@@ -19,7 +19,6 @@ a, a:hover, a:visited, a:focus {
     color: black;
 }
 
-
 .bottom {
     top: initial;
     bottom: 0;
@@ -97,9 +96,8 @@ a, a:hover, a:visited, a:focus {
 #top-text {
     text-align: center;
     top: 15px;
-    left: 55px;
     color: white;
-    width: 353px;
+    width: 100%;
     font-size: 36px;
 }
 
