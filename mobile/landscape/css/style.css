@@ -125,9 +125,9 @@ a, a:hover, a:visited, a:focus {
 
 #goto {
     top: initial;
-    left: 15px;
-    font-size: 17px;
-    bottom: 24px;
+    left: 24px;
+    font-size: 20px;
+    bottom: 19px;
     color: #fff;
 }
 
