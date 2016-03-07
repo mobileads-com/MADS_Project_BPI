@@ -355,6 +355,8 @@ var bpi = function () {
         markers[i].className = 'marker no-display';
       }
 
+      app.tracker('E', selected.tracker);
+
       var learnBox = document.getElementById('learnBox');
       learnBox.className = 'no-display';
     }
