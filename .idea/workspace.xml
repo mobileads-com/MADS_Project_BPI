@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1aee03a5-d3bb-4dee-88f5-48b89451c795" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/landscape/js/main.js" afterPath="$PROJECT_DIR$/desktop/landscape/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop/landscape/css/style.css" afterPath="$PROJECT_DIR$/desktop/landscape/css/style.css" />
     </list>
     <ignored path="MADS_Project_BPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +26,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mobile/landscape/js/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5496504">
-                  <caret line="438" column="48" selection-start-line="438" selection-start-column="48" selection-end-line="438" selection-end-column="48" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="435" column="59" selection-start-line="435" selection-start-column="59" selection-end-line="435" selection-end-column="59" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <marker date="1457327821758" expanded="true" signature="26720:26728" placeholder="..." />
@@ -43,6 +43,16 @@
                     <marker date="1457327821758" expanded="true" signature="32503:32511" placeholder="..." />
                     <marker date="1457327821758" expanded="true" signature="33257:33265" placeholder="..." />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/desktop/landscape/css/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.39477503">
+                  <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -84,8 +94,8 @@
           <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/desktop/landscape/js/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.23776224">
-                  <caret line="417" column="0" selection-start-line="417" selection-start-column="0" selection-end-line="417" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.52307695">
+                  <caret line="429" column="30" selection-start-line="429" selection-start-column="30" selection-end-line="429" selection-end-column="30" />
                   <folding>
                     <marker date="1457328730543" expanded="true" signature="26764:26772" placeholder="..." />
                     <marker date="1457328730543" expanded="true" signature="27589:27597" placeholder="..." />
@@ -117,10 +127,10 @@
         <option value="$PROJECT_DIR$/mobile/landscape/index.html" />
         <option value="$PROJECT_DIR$/desktop/landscape/css/sprites.css" />
         <option value="$PROJECT_DIR$/desktop/landscape/index.html" />
-        <option value="$PROJECT_DIR$/desktop/landscape/css/style.css" />
         <option value="$PROJECT_DIR$/mobile/landscape/css/style.css" />
         <option value="$PROJECT_DIR$/mobile/landscape/js/main.js" />
         <option value="$PROJECT_DIR$/desktop/landscape/js/main.js" />
+        <option value="$PROJECT_DIR$/desktop/landscape/css/style.css" />
       </list>
     </option>
   </component>
@@ -309,6 +319,28 @@
               <option name="myItemId" value="desktop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="landscape" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MADS_Project_BPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MADS_Project_BPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="desktop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -330,7 +362,7 @@
       <recent name="$PROJECT_DIR$/mobile/landscape/fonts" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.run dev">
+  <component name="RunManager" selected="JavaScript Debug.run desktop dev">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -461,7 +493,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457328034430</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fix desktop trackers (Jeff)">
+      <created>1457328759984</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1457328759984</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -572,6 +610,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -614,6 +653,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -656,6 +696,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -877,13 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/desktop/landscape/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2859922">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobile/landscape/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.7636364">
@@ -892,10 +926,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/desktop/landscape/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="442" column="12" selection-start-line="442" selection-start-column="12" selection-end-line="442" selection-end-column="12" />
+          <folding>
+            <marker date="1457328730543" expanded="true" signature="26764:26772" placeholder="..." />
+            <marker date="1457328730543" expanded="true" signature="27589:27597" placeholder="..." />
+            <marker date="1457328730543" expanded="true" signature="28454:28462" placeholder="..." />
+            <marker date="1457328730543" expanded="true" signature="29284:29292" placeholder="..." />
+            <marker date="1457328730543" expanded="true" signature="30062:30070" placeholder="..." />
+            <marker date="1457328730543" expanded="true" signature="30886:30894" placeholder="..." />
+            <marker date="1457328730543" expanded="true" signature="31713:31721" placeholder="..." />
+            <marker date="1457328730543" expanded="true" signature="32550:32558" placeholder="..." />
+            <marker date="1457328730543" expanded="true" signature="33304:33312" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mobile/landscape/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5496504">
-          <caret line="438" column="48" selection-start-line="438" selection-start-column="48" selection-end-line="438" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="435" column="59" selection-start-line="435" selection-start-column="59" selection-end-line="435" selection-end-column="59" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <marker date="1457327821758" expanded="true" signature="26720:26728" placeholder="..." />
@@ -911,21 +963,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/desktop/landscape/js/main.js">
+    <entry file="file://$PROJECT_DIR$/desktop/landscape/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23776224">
-          <caret line="417" column="0" selection-start-line="417" selection-start-column="0" selection-end-line="417" selection-end-column="0" />
-          <folding>
-            <marker date="1457328730543" expanded="true" signature="26764:26772" placeholder="..." />
-            <marker date="1457328730543" expanded="true" signature="27589:27597" placeholder="..." />
-            <marker date="1457328730543" expanded="true" signature="28454:28462" placeholder="..." />
-            <marker date="1457328730543" expanded="true" signature="29284:29292" placeholder="..." />
-            <marker date="1457328730543" expanded="true" signature="30062:30070" placeholder="..." />
-            <marker date="1457328730543" expanded="true" signature="30886:30894" placeholder="..." />
-            <marker date="1457328730543" expanded="true" signature="31713:31721" placeholder="..." />
-            <marker date="1457328730543" expanded="true" signature="32550:32558" placeholder="..." />
-            <marker date="1457328730543" expanded="true" signature="33304:33312" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.39477503">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
