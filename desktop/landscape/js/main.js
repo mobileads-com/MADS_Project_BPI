@@ -424,7 +424,7 @@ var bpi = function () {
       return m('div#second', [
         m('div#top-text', 'Tap On The Hotspots'),
         m('div#hotspots', m('img', {src: app.path + 'img/hotspots.png'})),
-        m('div#goto.bottom', 'Go to http://makethebesthappen.ph'),
+        m('div#goto.bottom', m.trust('Go to http://bit.do/bpiexpress')),
         m('button#learn.bottom', 'LEARN MORE ▸'),
         m('div#hidalgoMarker.marker', {onclick: markerClick}),
         m('div#karaokeMarker.marker', {onclick: markerClick}),
