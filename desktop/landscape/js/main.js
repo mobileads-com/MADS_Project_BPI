@@ -219,69 +219,79 @@ var bpi = function () {
       desc: 'Indulge your Inner cameraphile! Hidalgo street is packed with camera shops, and you can get anything from newest models to vintage SLRs.',
       map: 'http://maps.google.com/maps/api/staticmap?sensor=false&maptype=roadmap&zoom=16&size=195x90&markers=size:mid%7Ccolor:red%7CFR+Hidalgo+St,+Quiapo,+Manila,+Metro+Manila',
       coord: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d811.6765684798362!2d120.98675434639858!3d14.598722433918322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca1d44c4a2db%3A0xe9eda40e3a331b1!2sF-R.+Hidalgo+St%2C+Quiapo%2C+Manila%2C+Metro+Manila!5e0!3m2!1sen!2sph!4v1456366946645" width="640" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>',
-      img: 'camera'
+      img: 'camera',
+      tracker: 'hidalgo_stree'
     },
     churchMarker: {
       title: 'Quiapo Church',
       desc: 'Experience the Philippines\' unique blend of Christianity and folk beliefs at Quiapo church, where visitors can shop for amulets or get their fortunes in told after attending mass.',
       map: 'http://maps.google.com/maps/api/staticmap?sensor=false&maptype=roadmap&zoom=16&size=200x90&markers=size:mid%7Ccolor:red%7C14.598932, 120.983767',
       coord: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d682.5356952677627!2d120.9834828385187!3d14.598793827399883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM1JzU2LjIiTiAxMjDCsDU5JzAxLjYiRQ!5e0!3m2!1sen!2sph!4v1456366761721" width="640" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>',
-      img: 'church'
+      img: 'church',
+      tracker: 'quiapo_church'
     },
     foodMarker: {
       title: 'Eat Street Food',
       desc: 'No trip to Manila <br/> is complete without the street food! Start the day with hot taho (soy beancurd jelly with syrup and tapioca), and have turon (deep fried banana wraps drizzled with caramelized sugar) for merienda.',
       map: 'http://maps.google.com/maps/api/staticmap?sensor=false&maptype=roadmap&zoom=16&size=245x135&markers=size:mid%7Ccolor:red%7C14.601239, 120.976279',
       coord: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.240507033754!2d120.9757318292072!3d14.601238999362613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM2JzA0LjUiTiAxMjDCsDU4JzM0LjYiRQ!5e0!3m2!1sen!2sph!4v1456366308495" width="640" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>',
-      img: 'food'
+      img: 'food',
+      tracker: 'street_food'
     },
     sunMarker: {
       title: 'Watch a <br/>Noon Time Show',
       desc: 'Get a taste  of Philippine pop culture by watching a noontime show on one of the local channels over lunch. We\'ve got everything from dance competitions to lip-synching maids.',
       map: 'http://maps.google.com/maps/api/staticmap?sensor=false&maptype=roadmap&zoom=16&size=230x95&markers=size:mid%7Ccolor:red%7C14.639628, 121.035363',
       coord: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1930.1436323934165!2d121.03426865807462!3d14.639627997444435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM4JzIyLjciTiAxMjHCsDAyJzA3LjMiRQ!5e0!3m2!1sen!2sph!4v1456367053172" width="640" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>',
-      img: 'sun'
+      img: 'sun',
+      tracker: 'noontime_show'
     },
     fishMarker: {
       title: "Visit <br/>the Wet Market",
       desc: 'Sample the freshest ingredients at a local wet market! Find everything from seafood and vegetables to walis (local brooms).',
       map: 'http://maps.google.com/maps/api/staticmap?sensor=false&maptype=roadmap&zoom=16&size=260x145&markers=size:mid%7Ccolor:red%7C14.608053, 120.969402',
       coord: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1251.7227630495727!2d120.96895708980978!3d14.608143750362547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM2JzI5LjAiTiAxMjDCsDU4JzA5LjgiRQ!5e0!3m2!1sen!2sph!4v1456367091293" width="640" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>',
-      img: 'fish'
+      img: 'fish',
+      tracker: 'wet_market'
     },
     ballMarker: {
       title: 'Play <br/>Basketball',
       desc: 'Basketball is the country\'s most popular sport. It won\'t be difficult to find a game happening near you, as locals love playing basketball in the streets as well as the courts.',
       map: 'http://maps.google.com/maps/api/staticmap?sensor=false&maptype=roadmap&zoom=16&size=240x130&markers=size:mid%7Ccolor:red%7C14.611338, 120.963035',
       coord: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.1971581216274!2d120.96257038702477!3d14.61111333686712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM2JzQwLjgiTiAxMjDCsDU3JzQ2LjkiRQ!5e0!3m2!1sen!2sph!4v1456367127364" width="640" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>',
-      img: 'ball'
+      img: 'ball',
+      tracker: 'basketball'
     },
     shopMarker: {
       title: 'Shopping<br/>in Divisoria',
       desc: 'The city\'s largest and most popular bargain market will welcome you into its sprawling, chaotic arms. Shop for anything from textiles to souvenirs to fresh fruit.',
       map: 'http://maps.google.com/maps/api/staticmap?sensor=false&maptype=roadmap&zoom=16&size=220x90&markers=size:mid%7Ccolor:red%7C14.603643, 120.969495',
       coord: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.61509728741663!2d120.96930251653286!3d14.603588639998156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca0dc386c4f9%3A0xf9292bda346cf23b!2sDivisoria+Commercial!5e0!3m2!1sen!2sph!4v1456368008480" width="640" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>',
-      img: 'shop'
+      img: 'shop',
+      tracker: 'divisoria_shop'
     },
     karaokeMarker: {
       title: 'Karaoke',
       desc: 'Filipinos love to sing, which is why karaoke is an immensely popular activity. No need to visit a high-end karaoke bar. If you\'re staying with a local family, they probably have a karaoke machine on hand.',
       map: 'http://maps.google.com/maps/api/staticmap?sensor=false&maptype=roadmap&zoom=16&size=240x120&markers=size:mid%7Ccolor:red%7C14.635728, 121.032068',
       coord: '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d811.5394158351166!2d121.03175508331287!3d14.635847605129658!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7afc2577f2d%3A0xae1875e3ec89a0c2!2sKaraoke+Republic!5e0!3m2!1sen!2sph!4v1456367863685" width="640" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>',
-      img: 'karaoke'
+      img: 'karaoke',
+      tracker: 'karaoke'
     },
     jeepMarker: {
       title: 'Ride Local',
       desc: 'Ride a jeepney, a pedicab or a kalesa and see, hear and smell Manila from a local\'s point of view.',
       map: 'http://maps.google.com/maps/api/staticmap?sensor=false&maptype=roadmap&zoom=16&size=240x140&markers=size:mid%7Ccolor:red%7C14.653695, 121.072746',
       coord: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d811.4734419858975!2d121.07228819860569!3d14.653672966740672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7641b0869f7%3A0x4c705f94673a3c57!2sKatipunan+Jeepney+Terminal!5e0!3m2!1sen!2sph!4v1456367714394" width="640" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>',
-      img: 'jeep'
+      img: 'jeep',
+      tracker: 'jeepney'
     }
   };
 
   var selected = false,
       markerOpen = false,
-      onceManila = true;
+      onceManila = true,
+      opened = null;
 
   var persistent = function (el, isInit, context) {
     if (el.id === 'manila' && !isInit) {
@@ -333,6 +343,8 @@ var bpi = function () {
       var dialog = document.querySelector('.modal-dialog');
       var highspot = document.getElementById('highspot');
 
+      opened = selected.tracker;
+
       highspot.className = el.target.id.replace('Marker', '');
       dialog.id = el.target.id.replace('Marker', '');
       modal.className = 'modal show-modal ' + dialog.id;
@@ -358,6 +370,8 @@ var bpi = function () {
     modal.className = 'modal hiding';
     var imgMap = document.getElementById('smallmap');
 
+    opened = null;
+
     var markers = document.querySelectorAll('.marker');
     for (var i in markers) {
       markers[i].className = 'marker';
@@ -379,6 +393,7 @@ var bpi = function () {
   };
 
   var mapExpand = function () {
+    app.tracker('E', opened + '_expand');
     var mapContainer = document.getElementById('mapexpanded');
     mapContainer.className = '';
   };
@@ -390,10 +405,11 @@ var bpi = function () {
 
   var learnMore = function () {
     app.tracker('CTR', 'site');
-    app.linkOpener('http://makethebesthappen.ph');
+    app.linkOpener('//bit.do/bpiexpress');
   };
 
   var downloadFile = function (el) {
+    app.tracker('E', 'download');
     app.linkOpener(el.target.href);
     el.preventDefault();
   };

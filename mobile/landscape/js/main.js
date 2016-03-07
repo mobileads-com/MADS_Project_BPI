@@ -372,7 +372,7 @@ var bpi = function () {
     modal.className = 'modal hiding';
     var imgMap = document.getElementById('smallmap');
 
-    opened = '';
+    opened = null;
 
     var markers = document.querySelectorAll('.marker');
     for (var i in markers) {
