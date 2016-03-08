@@ -407,7 +407,7 @@ var bpi = function () {
 
   var learnMore = function () {
     app.tracker('CTR', 'site');
-    app.linkOpener('//bit.do/bpiexpress');
+    app.linkOpener('http://bit.do/bpiexpress');
   };
 
   var downloadFile = function (el) {
