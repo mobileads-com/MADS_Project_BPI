@@ -302,7 +302,7 @@ var bpi = function () {
           onceManila = !onceManila;
           el.style.opacity = 1;
           setTimeout(function () {
-            m.mount(document.getElementById('ad'), fadeInOut(second));
+            m.mount(document.getElementById('bpiad'), fadeInOut(second));
             clearInterval(si);
           }, 1000);
         }
@@ -462,11 +462,11 @@ var bpi = function () {
     }
   };
 
-  app.contentTag.innerHTML = '<div id="ad"></div>';
+  app.contentTag.innerHTML = '<div id="bpiad"></div>';
 
-  m.render(document.getElementById('ad'), fadeInOut(first));
+  m.render(document.getElementById('bpiad'), fadeInOut(first));
 
-  app.loadCss('css/style.css');
+  app.loadCss(app.path + 'css/style.css');
 
 };
 

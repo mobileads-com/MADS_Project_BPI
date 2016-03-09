@@ -5,7 +5,7 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-*:not(.modal):not(.modal-body):not(.modal-dialog):not(.modal-footer):not(.modal-header):not([class*="icon-"]):not(.gray) {
+*:not(.modal):not(.modal-body):not(.modal-dialog):not(.modal-footer):not(.modal-header):not([class*="icon-"]):not(.gray):not(#bpiad) {
     margin: 0;
     padding: 0;
     font-family: harabara, sans-serif;
@@ -53,7 +53,7 @@ a, a:hover, a:visited, a:focus {
     /*opacity: 0.3;*/
 /*}*/
 
-#ad {
+#bpiad {
     /*-webkit-transform: translate(-80px, 80px) rotate(90deg);*/
     /*-moz-transform: translate(-80px, 80px) rotate(90deg);*/
     /*-ms-transform: translate(-80px, 80px) rotate(90deg);*/
@@ -61,7 +61,7 @@ a, a:hover, a:visited, a:focus {
     /*transform: translate(-80px, 80px) rotate(90deg);*/
 }
 
-#ad, #second, #first {
+#bpiad, #second, #first {
     width: 480px;
     height: 320px;
 }
