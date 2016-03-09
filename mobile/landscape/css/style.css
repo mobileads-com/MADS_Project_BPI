@@ -184,7 +184,7 @@ a, a:hover, a:visited, a:focus {
 
 .modal-dialog {
     background: #fefefe;
-    position: fixed;
+    position: absolute;
     left: 0;
     top: -100%;
     z-index: 3;
@@ -208,6 +208,7 @@ a, a:hover, a:visited, a:focus {
 
 .modal-header h2 {
     font-size: 24px;
+    text-align: left;
     color: #c82505;
     font-family: 'harabaran', sans-serif !important;
 }
@@ -220,6 +221,7 @@ a, a:hover, a:visited, a:focus {
 .modal-body .desc {
     font-size: 15px;
     line-height: 16px;
+    text-align: left;
     font-family: 'harabaran', sans-serif !important;
 }
 

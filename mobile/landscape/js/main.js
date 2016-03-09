@@ -434,7 +434,7 @@ var bpi = function () {
         m('div#top-text', 'Tap On The Hotspots'),
         m('div#hotspots', m('img', {src: app.path + 'img/hotspots.png'})),
         m('div#goto.bottom', m.trust('Go to http://bit.do/bpiexpress')),
-        m('button#learn.bottom', 'LEARN MORE ▸'),
+        m('button#learn.bottom', m.trust('LEARN MORE &#x2023;')),
         m('div#hidalgoMarker.marker', {onclick: markerClick}),
         m('div#karaokeMarker.marker', {onclick: markerClick}),
         m('div#ballMarker.marker', {onclick: markerClick}),
@@ -446,12 +446,12 @@ var bpi = function () {
         m('div#shopMarker.marker', {onclick: markerClick}),
         m('div#learnBox', {onclick: learnMore}),
         m('div#highspot.none'),
-        m('div#mapexpanded.hide', [m('button#closemap', {onclick: mapCollapse}, m.trust('CLOSE MAP <span class="gray">✖</span>')), m.trust(selected.coord)]),
+        m('div#mapexpanded.hide', [m('button#closemap', {onclick: mapCollapse}, m.trust('CLOSE MAP <span class="gray">&#x2716;</span>')), m.trust(selected.coord)]),
         m('div.modal', {'aria-hidden': true}, m('div.modal-dialog', [
               m('div.modal-header', [
                 m('h2', m.trust(selected.title)),
                 m('div.img-' + selected.img),
-                m('button[aria-hidden="true"].btn-close', {onclick: markerClose}, 'X')
+                m('button[aria-hidden="true"].btn-close', {onclick: markerClose}, m.trust('&#x2716;'))
               ]),
               m('div.modal-body', [
                 m('div.desc', m.trust(selected.desc)),
