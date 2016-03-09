@@ -164,12 +164,22 @@ a, a:hover, a:visited, a:focus {
     opacity: 0.6;
     width: 480px;
     height: 320px;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -ms-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
 }
 
 .modal.hiding:before {
     width: 480px;
     height: 320px;
     opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -ms-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
 }
 
 .modal.hiding .modal-dialog {
