@@ -5,7 +5,7 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-*:not(.modal):not(.modal-body):not(.modal-dialog):not(.modal-footer):not(.modal-header):not([class*="icon-"]):not(.gray):not(#bpiad) {
+#rma-widget, .bpiad div:not(.modal):not(.modal-body):not(.modal-dialog):not(.modal-footer):not(.modal-header):not([class*="icon-"]):not(.gray), .bpiad img, .bpiad button, .bpiad a, .bpiad h2, .bpiad iframe {
     margin: 0;
     padding: 0;
     font-family: harabara, sans-serif;

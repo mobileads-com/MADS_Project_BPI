@@ -462,7 +462,7 @@ var bpi = function () {
     }
   };
 
-  app.contentTag.innerHTML = '<div id="bpiad"></div>';
+  app.contentTag.innerHTML = '<div id="bpiad" class="bpiad"></div>';
 
   m.render(document.getElementById('bpiad'), fadeInOut(first));
 
