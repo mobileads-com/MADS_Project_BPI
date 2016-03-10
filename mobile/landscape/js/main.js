@@ -377,7 +377,7 @@ var bpi = function () {
     var modal = document.querySelector('.modal');
     var dialog = document.querySelector('.modal-dialog');
     var highspot = document.getElementById('highspot');
-    modal.className = 'modal hiding';
+    modal.className = modal.className.replace('show-modal', 'hiding');
     var imgMap = document.getElementById('smallmap');
 
     opened = null;
@@ -447,7 +447,7 @@ var bpi = function () {
         m('div#learnBox', {onclick: learnMore}),
         m('div#highspot.none'),
         m('div#mapexpanded.hide', [m('button#closemap', {onclick: mapCollapse}, m.trust('CLOSE MAP <span class="gray">&#x2716;</span>')), m.trust(selected.coord)]),
-        m('div.modal', {'aria-hidden': true}, m('div.modal-dialog', [
+        m('div.modal', {'aria-hidden': true}, m('div.modal-dialog.hide', [
               m('div.modal-header', [
                 m('h2', m.trust(selected.title)),
                 m('div.img-' + selected.img),

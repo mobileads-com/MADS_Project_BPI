@@ -370,7 +370,7 @@ var bpi = function () {
     var modal = document.querySelector('.modal');
     var dialog = document.querySelector('.modal-dialog');
     var highspot = document.getElementById('highspot');
-    modal.className = 'modal hiding';
+    modal.className = modal.className.replace('show-modal', 'hiding');
     var imgMap = document.getElementById('smallmap');
 
     opened = null;
