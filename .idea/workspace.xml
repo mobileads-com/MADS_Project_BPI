@@ -2,34 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aee03a5-d3bb-4dee-88f5-48b89451c795" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/harabara_mais-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/harabara_mais-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/harabara_mais-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/harabara_mais-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/harabara_mais_bold-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/harabara_mais_bold-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/harabara_mais_bold-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/harabara_mais_bold-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/icomoon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/icomoon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/icomoon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/img/highspot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/img/hotspots.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/img/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/img/manila.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/img/sprites.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/img/trace.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/css/font.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/css/sprites.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/harabara_mais-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/harabara_mais_bold-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/fonts/icomoon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/js/micro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsite/old.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/microsite/js/micro.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/microsite/old.html" afterPath="$PROJECT_DIR$/microsite/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microsite/css/style.css" afterPath="$PROJECT_DIR$/microsite/css/style.css" />
     </list>
     <ignored path="MADS_Project_BPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,52 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/desktop/landscape/index.html">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/microsite/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.461538">
-              <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/desktop/landscape/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="366" column="18" selection-start-line="366" selection-start-column="18" selection-end-line="366" selection-end-column="18" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <marker date="1457573069867" expanded="true" signature="51835:51843" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="52660:52668" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="53525:53533" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="54355:54363" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="55133:55141" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="55957:55965" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="56784:56792" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="57621:57629" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="58375:58383" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="font.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microsite/css/font.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="old.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microsite/old.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.692308">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="44" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.287373">
+              <caret line="192" column="11" selection-start-line="192" selection-start-column="11" selection-end-line="192" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -104,50 +39,9 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microsite/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="19" />
+            <state vertical-scroll-proportion="8.807693">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microsite/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="469" column="42" selection-start-line="469" selection-start-column="42" selection-end-line="469" selection-end-column="42" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <marker date="1457573069867" expanded="true" signature="51835:51843" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="52660:52668" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="53525:53533" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="54355:54363" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="55133:55141" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="55957:55965" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="56784:56792" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="57621:57629" placeholder="..." />
-                <marker date="1457573069867" expanded="true" signature="58375:58383" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="micro.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/microsite/js/micro.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33659217">
-              <caret line="180" column="42" selection-start-line="180" selection-start-column="42" selection-end-line="180" selection-end-column="42" />
-              <folding>
-                <marker date="1458723943163" expanded="true" signature="47914:47922" placeholder="..." />
-                <marker date="1458723943163" expanded="true" signature="48783:48791" placeholder="..." />
-                <marker date="1458723943163" expanded="true" signature="49692:49700" placeholder="..." />
-                <marker date="1458723943163" expanded="true" signature="50566:50574" placeholder="..." />
-                <marker date="1458723943163" expanded="true" signature="51388:51396" placeholder="..." />
-                <marker date="1458723943163" expanded="true" signature="52256:52264" placeholder="..." />
-                <marker date="1458723943163" expanded="true" signature="53127:53135" placeholder="..." />
-                <marker date="1458723943163" expanded="true" signature="54008:54016" placeholder="..." />
-                <marker date="1458723943163" expanded="true" signature="54806:54814" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -181,6 +75,7 @@
         <option value="$PROJECT_DIR$/desktop/landscape/js/main.js" />
         <option value="$PROJECT_DIR$/microsite/index.html" />
         <option value="$PROJECT_DIR$/microsite/js/micro.js" />
+        <option value="$PROJECT_DIR$/microsite/css/style.css" />
       </list>
     </option>
   </component>
@@ -191,7 +86,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1604" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -267,7 +163,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -513,15 +409,22 @@
       <option name="project" value="LOCAL" />
       <updated>1457579873102</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="update microsite (Jeff)">
+      <created>1458724418075</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1458724418076</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1604" height="876" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3007663" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29847908" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32823366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -530,7 +433,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32823366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -567,7 +469,8 @@
     <MESSAGE value="update css (Jeff)" />
     <MESSAGE value="fix css (Jeff)" />
     <MESSAGE value="fix css animation (Jeff)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix css animation (Jeff)" />
+    <MESSAGE value="update microsite (Jeff)" />
+    <option name="LAST_COMMIT_MESSAGE" value="update microsite (Jeff)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1092,7 +995,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/desktop/landscape/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.461538">
+        <state vertical-scroll-proportion="1.0362844">
           <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
           <folding />
         </state>
@@ -1100,8 +1003,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/desktop/landscape/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="366" column="18" selection-start-line="366" selection-start-column="18" selection-end-line="366" selection-end-column="18" />
+        <state vertical-scroll-proportion="1.4181818">
+          <caret line="355" column="7" selection-start-line="355" selection-start-column="7" selection-end-line="355" selection-end-column="7" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <marker date="1457573069867" expanded="true" signature="51835:51843" placeholder="..." />
@@ -1114,67 +1017,22 @@
             <marker date="1457573069867" expanded="true" signature="57621:57629" placeholder="..." />
             <marker date="1457573069867" expanded="true" signature="58375:58383" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microsite/css/font.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microsite/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="469" column="42" selection-start-line="469" selection-start-column="42" selection-end-line="469" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1457573069867" expanded="true" signature="51835:51843" placeholder="..." />
-            <marker date="1457573069867" expanded="true" signature="52660:52668" placeholder="..." />
-            <marker date="1457573069867" expanded="true" signature="53525:53533" placeholder="..." />
-            <marker date="1457573069867" expanded="true" signature="54355:54363" placeholder="..." />
-            <marker date="1457573069867" expanded="true" signature="55133:55141" placeholder="..." />
-            <marker date="1457573069867" expanded="true" signature="55957:55965" placeholder="..." />
-            <marker date="1457573069867" expanded="true" signature="56784:56792" placeholder="..." />
-            <marker date="1457573069867" expanded="true" signature="57621:57629" placeholder="..." />
-            <marker date="1457573069867" expanded="true" signature="58375:58383" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microsite/old.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.692308">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="44" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/microsite/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="19" />
+        <state vertical-scroll-proportion="8.807693">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microsite/js/micro.js">
+    <entry file="file://$PROJECT_DIR$/microsite/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33659217">
-          <caret line="180" column="42" selection-start-line="180" selection-start-column="42" selection-end-line="180" selection-end-column="42" />
-          <folding>
-            <marker date="1458723943163" expanded="true" signature="47914:47922" placeholder="..." />
-            <marker date="1458723943163" expanded="true" signature="48783:48791" placeholder="..." />
-            <marker date="1458723943163" expanded="true" signature="49692:49700" placeholder="..." />
-            <marker date="1458723943163" expanded="true" signature="50566:50574" placeholder="..." />
-            <marker date="1458723943163" expanded="true" signature="51388:51396" placeholder="..." />
-            <marker date="1458723943163" expanded="true" signature="52256:52264" placeholder="..." />
-            <marker date="1458723943163" expanded="true" signature="53127:53135" placeholder="..." />
-            <marker date="1458723943163" expanded="true" signature="54008:54016" placeholder="..." />
-            <marker date="1458723943163" expanded="true" signature="54806:54814" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.287373">
+          <caret line="192" column="11" selection-start-line="192" selection-start-column="11" selection-end-line="192" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
