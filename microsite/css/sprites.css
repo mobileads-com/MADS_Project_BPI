@@ -1,0 +1,76 @@
+.img-ball, .img-camera, .img-church, .img-fish, .img-food, .img-jeep, .img-karaoke, .img-shop, .img-sun{
+	background: url(../img/sprites.png) no-repeat;
+}
+
+.img-ball{
+	background-position: -228px -106px;
+	width: 90px;
+	height: 73px;
+	left: 157px !important;
+	top: -10px !important;
+}
+
+.img-camera{
+	background-position: -326px -87px;
+	width: 64px;
+	height: 50px;
+	left: 18px !important;
+	top: -24px !important;
+}
+
+.img-church{
+	background-position: -143px -99px;
+	width: 82px;
+	height: 66px;
+	left: 82px !important;
+	top: -31px !important;
+}
+
+.img-fish{
+	background-position: -310px 0;
+	width: 154px;
+	height: 78px;
+	left: 117px !important;
+	top: -26px !important;
+}
+
+.img-food{
+	background-position: -235px 0;
+	width: 71px;
+	height: 87px;
+	left: 203px !important;
+	top: -26px !important;
+}
+
+.img-jeep{
+	background-position: 0 -96px;
+	width: 140px;
+	height: 84px;
+	left: 16px !important;
+	top: -40px !important;
+}
+
+.img-karaoke{
+	background-position: -159px 0;
+	width: 73px;
+	height: 90px;
+	left: 133px !important;
+	top: 7px !important;
+}
+
+.img-shop{
+	background-position: -82px 0;
+	width: 75px;
+	height: 92px;
+	left: 17px !important;
+	top: -9px !important;
+}
+
+.img-sun{
+	background-position: 0 0;
+	width: 77px;
+	height: 76px;
+	left: 149px !important;
+	top: -30px !important;
+}
+

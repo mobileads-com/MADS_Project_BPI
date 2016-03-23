@@ -1,0 +1,748 @@
+@import './font.css';
+@import './sprites.css';
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#rma-widget, .bpiad div:not(.modal):not(.modal-body):not(.modal-dialog):not(.modal-footer):not(.modal-header):not([class*="icon-"]):not(.gray), .bpiad img, .bpiad button, .bpiad a, .bpiad h2, .bpiad iframe {
+    margin: 0;
+    padding: 0;
+    font-family: harabara, sans-serif;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+a, a:hover, a:visited, a:focus {
+    text-decoration: none;
+    color: black;
+}
+
+.bottom {
+    top: initial;
+    bottom: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn .9s ease-in 1 forwards;
+    -webkit-animation: fadeIn .9s ease-in 1 forwards;
+    -o-animation: fadeIn .9s ease-in 1 forwards;
+}
+
+.is-paused {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+#trace {
+    /*width: 640px;*/
+    /*height: 400px;*/
+    /*background: url(../img/trace.png);*/
+    /*background-size: cover;*/
+    /*z-index: 100;*/
+    /*opacity: 0.3;*/
+}
+
+/*#bpiad {*/
+/*-webkit-transform: translate(-80px, 80px) rotate(90deg);*/
+/*-moz-transform: translate(-80px, 80px) rotate(90deg);*/
+/*-ms-transform: translate(-80px, 80px) rotate(90deg);*/
+/*-o-transform: translate(-80px, 80px) rotate(90deg);*/
+/*transform: translate(-80px, 80px) rotate(90deg);*/
+/*}*/
+
+#bpiad, #second, #first {
+    width: 640px;
+    height: 400px;
+}
+
+#rma-widget {
+    width: 640px;
+    height: 400px;
+    background: -webkit-linear-gradient(335deg, rgb(2, 163, 223) 0%, rgb(50, 182, 230) 1%, rgb(8, 165, 224) 82%);
+    background: -o-linear-gradient(335deg, rgb(2, 163, 223) 0%, rgb(50, 182, 230) 1%, rgb(8, 165, 224) 82%);
+    background: -ms-linear-gradient(335deg, rgb(2, 163, 223) 0%, rgb(50, 182, 230) 1%, rgb(8, 165, 224) 82%);
+    background: -moz-linear-gradient(335deg, rgb(2, 163, 223) 0%, rgb(50, 182, 230) 1%, rgb(8, 165, 224) 82%);
+    background: linear-gradient(115deg, rgb(2, 163, 223) 0%, rgb(50, 182, 230) 1%, rgb(8, 165, 224) 82%);
+}
+
+#manila, #first {
+    opacity: 0;
+    -webkit-transition: opacity .9s ease-in;
+    -moz-transition: opacity .9s ease-in;
+    -ms-transition: opacity .9s ease-in;
+    -o-transition: opacity .9s ease-in;
+    transition: opacity .9s ease-in;
+}
+
+#top-text, #hotspots, #learn, #goto {
+    -webkit-transition: opacity .6s ease-out;
+    -moz-transition: opacity .6s ease-out;
+    -ms-transition: opacity .6s ease-out;
+    -o-transition: opacity .6s ease-out;
+    transition: opacity .6s ease-out;
+}
+
+#top-text {
+    text-align: center;
+    top: 5px;
+    color: white;
+    width: 100%;
+    font-size: 50px;
+}
+
+#manila, #hotspots {
+    top: 97px;
+    left: 14px;
+}
+
+#hotspots {
+    z-index: 1;
+}
+
+#learn {
+    top: initial;
+    left: initial;
+    bottom: 17px;
+    right: 15px;
+    padding: 3px 10px;
+    font-size: 28px;
+    border-radius: 4px;
+    background: #ff2500;
+    color: #fff;
+    border: 0;
+}
+
+#goto {
+    top: initial;
+    left: 20px;
+    font-size: 27px;
+    bottom: 22px;
+    color: #fff;
+}
+
+/* Modal */
+.btn-close {
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    left: initial !important;
+    top: -21px !important;
+    font-size: 17px;
+    color: white;
+    background: none;
+    border: none;
+}
+
+.modal:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 2;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -ms-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+
+.modal.show-modal:before {
+    opacity: 0.6;
+    width: 640px;
+    height: 400px;
+}
+
+.modal.hiding:before {
+    width: 640px;
+    height: 400px;
+    opacity: 0;
+}
+
+.modal.hiding .modal-dialog {
+    opacity: 1;
+    top: 0;
+}
+
+.modal.show-modal .modal-dialog {
+    opacity: 1;
+    top: 0;
+}
+
+.modal-dialog {
+    background: #fefefe;
+    position: fixed;
+    left: 0;
+    top: -100%;
+    z-index: 3;
+    width: 238px;
+    height: 347px;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-header,
+.modal-footer {
+    padding: 10px 20px;
+}
+
+.modal-header h2 {
+    font-size: 29px;
+    color: #c82505;
+    font-family: 'harabaran', sans-serif !important;
+}
+
+.modal-footer {
+    border-top: #eee solid 1px;
+    text-align: right;
+}
+
+.modal-body .desc {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    font-family: 'harabaran', sans-serif !important;
+}
+
+.modal-body .map {
+    bottom: 34px !important;
+    top: initial !important;
+    left: 17px !important;
+}
+
+.modal-body [class*="icon-"] {
+    font-size: 12px;
+}
+
+.modal-body .download {
+    bottom: 5px !important;
+    top: initial !important;
+    font-size: 17.5px;
+    left: 19px !important;
+}
+
+.modal-body .expand {
+    bottom: 5px !important;
+    top: initial !important;
+    font-size: 17.5px;
+    left: 133px !important;
+}
+
+
+
+#mapexpanded {
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 400px;
+    z-index: 10;
+    opacity: 1;
+    background: #fff;
+    -webkit-transition: opacity 0.6s ease-out;
+    -moz-transition: opacity 0.6s ease-out;
+    -o-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+#mapexpanded button {
+    z-index: 6;
+}
+
+.gray {
+    color: #ccc;
+}
+
+#mapexpanded button {
+    right: 41px;
+    top: 14px;
+    left: initial;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 3px 15px;
+    color: #fff;
+    border: none;
+}
+
+#mapexpanded.hide {
+    left: -50px;
+    top: -100%;
+    opacity: 0;
+    background: #fff;
+}
+
+.expand, .marker {
+    cursor: pointer;
+}
+
+#learnBox {
+    width: 480px;
+    bottom: 0;
+    height: 73px;
+    top: initial;
+    z-index: 50;
+}
+
+.no-display {
+    display: none;
+}
+
+#highspot {
+    background: url(../img/highspot.png);
+    width: 36px;
+    height: 49px;
+    z-index: 4;
+}
+
+#highspot.none {
+    top: -100%;
+    left: -50px;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    -moz-transition: opacity 0.6s ease-out;
+    -o-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+#highspot:not(.none) {
+    opacity: 1;
+    -webkit-transition: opacity 0.6s ease-out;
+    -moz-transition: opacity 0.6s ease-out;
+    -o-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+#highspot.hidalgo {
+    left: 81px;
+    top: 111px;
+}
+
+#highspot.church {
+    left: 100px;
+    top: 98px;
+}
+
+#highspot.church {
+    left: 144px;
+    top: 115px;
+}
+
+#highspot.fish {
+    left: 181px;
+    top: 231px;
+}
+
+#highspot.ball {
+    left: 286px;
+    top: 250px;
+}
+
+#highspot.food {
+    left: 307px;
+    top: 145px;
+}
+
+#highspot.karaoke {
+    left: 348px;
+    top: 214px;
+}
+
+#highspot.sun {
+    left: 373px;
+    top: 99px;
+}
+
+#highspot.jeep {
+    left: 489px;
+    top: 234px;
+}
+
+#highspot.shop {
+    left: 581px;
+    top: 204px;
+}
+
+/* Hidalgo */
+.hidalgo:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 98px 130px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 98px 130px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 98px 130px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#hidalgo {
+    left: 188px;
+    top: 35px;
+}
+
+#hidalgo h2 {
+    top: 36px;
+    left: 22px;
+}
+
+#hidalgo .desc {
+    padding: 24px;
+    top: 50px;
+}
+
+/* Church */
+.church:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 159px 136px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 159px 136px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 159px 136px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+#church {
+    left: 210px;
+    top: 35px;
+    width: 237px;
+}
+
+#church h2 {
+    top: 41px;
+    left: 20px;
+}
+
+#church .desc {
+    top: 77px;
+    left: 20px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#church .expand {
+    left: 143px !important;
+}
+
+/* Fish */
+.fish:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 203px 248px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 203px 248px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 203px 248px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#fish {
+    left: 268px;
+    top: 41px;
+    width: 293px;
+}
+
+#fish h2 {
+    top: 18px;
+    left: 13px;
+}
+
+#fish .desc {
+    padding: 11px 11px;
+    top: 76px;
+    left: 3px;
+    font-size: 16px;
+    line-height: initial;
+}
+
+#fish .expand {
+    left: 194px !important;
+}
+
+/* Ball */
+.ball:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 285px 268px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 285px 268px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 285px 268px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#ball {
+    left: 357px;
+    top: 36px;
+    width: 266px;
+}
+
+#ball h2 {
+    top: 9px;
+    left: 15px;
+    line-height: 24px;
+}
+
+#ball .desc {
+    padding: 16px 14px;
+    top: 48px;
+    left: 1px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#ball .expand {
+    left: 153px !important;
+}
+
+#ball .map {
+    left: 14px !important;
+    bottom: 25px !important;
+}
+
+#ball .download {
+    left: 13px !important;
+}
+
+#ball .btn-close {
+    left: 2px !important;
+    right: initial;
+}
+
+/* Food */
+.food:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 313px 174px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 313px 174px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 313px 174px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#food {
+    left: 361px;
+    top: 36px;
+    width: 267px;
+}
+
+#food h2 {
+    top: 4px;
+    left: 7px;
+}
+
+#food .desc {
+    padding: 11px;
+    top: 35px;
+    font-size: 16px;
+    line-height: 17px;
+}
+
+#food .expand {
+    left: 175px !important;
+}
+
+#food .map {
+    left: 11px !important;
+    bottom: 25px !important;
+}
+
+#food .download {
+    left: 10px !important;
+}
+
+#food .btn-close {
+    left: 2px !important;
+    right: initial;
+}
+
+/* Karaoke */
+.karaoke:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 354px 231px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 354px 231px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 354px 231px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#karaoke {
+    left: 43px;
+    top: 35px;
+    width: 266px;
+}
+
+#karaoke h2 {
+    top: 11px;
+    left: 10px;
+}
+
+#karaoke .desc {
+    padding: 17px;
+    top: 31px;
+    left: -5px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#karaoke .expand {
+    left: 172px !important;
+}
+
+#karaoke .map, #karaoke .download {
+    left: 9px !important;
+}
+
+/* Sun */
+.sun:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 375px 129px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 375px 129px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 375px 129px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#sun {
+    left: 59px;
+    top: 35px;
+    width: 255px;
+}
+
+#sun h2 {
+    top: 10px;
+    left: 13px;
+    font-size: 28px;
+}
+
+#sun .desc {
+    padding: 14px;
+    top: 66px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+#sun .map {
+    left:12px !important;
+}
+
+#sun .download {
+    left: 12px !important;
+}
+
+#sun .expand {
+    left: 162px !important;
+}
+
+/* Jeep */
+.jeep:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 488px 256px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 488px 256px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 488px 256px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#jeep {
+    left: 117px;
+    top: 41px;
+    width: 271px;
+}
+
+#jeep h2 {
+    top: 43px;
+    left: 14px;
+}
+
+#jeep .desc {
+    padding: 8px;
+    top: 74px;
+    left: 8px !important;
+    font-size: 17px;
+}
+
+#jeep .expand {
+    left: 157px !important
+}
+
+#jeep .map {
+    left: 12px !important;
+}
+
+#jeep .download {
+    left: 11px !important;
+}
+
+/* Shop */
+.shop:before {
+    background: rgba(0, 0, 0, 0) -moz-radial-gradient(circle at 586px 223px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) -webkit-radial-gradient(circle at 586px 223px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle at 586px 223px, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 1) 23%);
+}
+
+#shop {
+    left: 61px;
+    top: 36px;
+    width: 253px;
+}
+
+#shop h2 {
+    top: 15px;
+    left: 102px;
+    font-size: 27px;
+}
+
+#shop .desc {
+    padding: 15px;
+    top: 83px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+#shop .expand {
+    left: 155px !important;
+}
+
+#shop .map {
+    left: 13px !important;
+}
+
+#shop .download {
+    left: 14px !important;
+}
+
+/* Markers */
+.marker {
+    width: 60px;
+    height: 60px;
+    z-index: 50;
+}
+
+#hidalgoMarker {
+    left: 66px;
+    top: 104px;
+}
+
+#karaokeMarker {
+    left: 335px;
+    top: 208px;
+}
+
+#ballMarker {
+    top: 241px;
+    left: 272px;
+}
+
+#churchMarker {
+    top: 101px;
+    left: 129px;
+}
+
+#fishMarker {
+    top: 223px;
+    left: 164px;
+}
+
+#jeepMarker {
+    top: 227px;
+    left: 473px;
+}
+
+#sunMarker {
+    top: 90px;
+    left: 358px;
+}
+
+#shopMarker {
+    top: 193px;
+    left: 566px;
+}
+
+#foodMarker {
+    top: 134px;
+    left: 293px;
+}
